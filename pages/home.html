@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>宠物洗护 - 首页</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* 确保内容在设备容器内完整显示 */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    /* 调整轮播特色服务卡片 */
+    .scrollable-container {
+      display: flex;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 5px;
+      scrollbar-width: none; /* Firefox */
+      width: 100%;
+    }
+    
+    .scrollable-container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Edge */
+    }
+    
+    .feature-card-container {
+      flex: 0 0 140px;
+      margin-right: 10px;
+    }
+    
+    .feature-card-container:last-child {
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="device-container">
+    <!-- 引入头部状态栏 -->
+    <iframe src="../components/header.html" frameborder="0" style="width:100%; height:80px; border:none; overflow:hidden;"></iframe>
+    
+    <div class="app-content">
+      <!-- 页面标题 -->
+      <h1 class="page-title">宠物洗护</h1>
+      <p class="subtitle">欢迎使用自助洗宠物服务</p>
+      
+      <!-- 搜索框 -->
+      <div class="search-bar">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" placeholder="搜索设备位置..." class="search-input">
+      </div>
+      
+      <!-- 轮播横幅 -->
+      <div class="pet-image-container" style="margin: 15px 20px; height: 150px; position: relative;">
+        <img src="https://images.unsplash.com/photo-1544568100-847a948585b9" alt="宠物洗护服务" class="pet-image" style="height: 100%; width: 100%; object-position: center 40%;">
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); padding: 15px; color: white; border-radius: 0 0 12px 12px;">
+          <div style="font-weight: 600; font-size: 18px;">春季特惠活动</div>
+          <div style="font-size: 14px; opacity: 0.9; margin-top: 4px;">新客首单立减20元</div>
+        </div>
+      </div>
+      
+      <!-- 快捷按钮 -->
+      <div class="card" style="margin: 15px 20px; display: flex; gap: 12px;">
+        <button class="btn btn-primary" style="flex: 1;">
+          <i class="fas fa-qrcode" style="margin-right: 8px;"></i>
+          扫码即用
+        </button>
+        <button class="btn btn-outline" style="flex: 1;">
+          <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i>
+          预约使用
+        </button>
+      </div>
+      
+      <!-- 特色服务 -->
+      <div style="margin: 20px 20px;">
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 15px;">特色服务</h2>
+        
+        <div class="scrollable-container">
+          <div class="feature-card-container">
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" alt="标准洗护">
+              <div class="feature-overlay">
+                <div class="feature-title">标准洗护</div>
+                <div class="feature-description">快速清洁服务</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature-card-container">
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7" alt="豪华SPA">
+              <div class="feature-overlay">
+                <div class="feature-title">豪华SPA</div>
+                <div class="feature-description">舒缓精致护理</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature-card-container">
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993" alt="专业烘干">
+              <div class="feature-overlay">
+                <div class="feature-title">专业烘干</div>
+                <div class="feature-description">舒适不伤毛发</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 附近设备 -->
+      <div style="margin: 20px 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+          <h2 style="font-size: 20px; font-weight: 600;">附近设备</h2>
+          <a href="../pages/nearby.html" style="color: var(--primary); font-size: 14px;">查看全部</a>
+        </div>
+        
+        <div class="device-item">
+          <div class="device-info">
+            <div class="device-name">江东万达洗宠站点</div>
+            <div class="device-address">宁波市江东区万达广场B座北门旁</div>
+            <div class="device-distance">距离: 300米</div>
+          </div>
+          <div>
+            <span class="status-tag status-available">空闲中</span>
+          </div>
+        </div>
+        
+        <div class="device-item">
+          <div class="device-info">
+            <div class="device-name">宠爱天一设备A</div>
+            <div class="device-address">宁波市海曙区天一广场宠爱中心</div>
+            <div class="device-distance">距离: 1.2公里</div>
+          </div>
+          <div>
+            <span class="status-tag status-busy">使用中</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 热门套餐 -->
+      <div style="margin: 20px 20px;">
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 15px;">热门套餐</h2>
+        
+        <div class="package-card">
+          <div class="package-header">
+            <div style="display: flex; align-items: center;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255, 148, 120, 0.1); display: flex; justify-content: center; align-items: center; margin-right: 10px;">
+                <i class="fas fa-shower" style="color: var(--primary);"></i>
+              </div>
+              <div class="package-name">标准洗护</div>
+            </div>
+            <div class="package-price">¥39.9</div>
+          </div>
+          <ul class="package-features">
+            <li class="package-feature">
+              <i class="fas fa-check feature-icon"></i>
+              <span>15分钟洗护时间</span>
+            </li>
+            <li class="package-feature">
+              <i class="fas fa-check feature-icon"></i>
+              <span>标准水温与压力</span>
+            </li>
+            <li class="package-feature">
+              <i class="fas fa-check feature-icon"></i>
+              <span>中温烘干</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="package-card">
+          <div class="package-header">
+            <div style="display: flex; align-items: center;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255, 148, 120, 0.1); display: flex; justify-content: center; align-items: center; margin-right: 10px;">
+                <i class="fas fa-spa" style="color: var(--primary);"></i>
+              </div>
+              <div class="package-name">豪华SPA</div>
+            </div>
+            <div class="package-price">¥68.8</div>
+          </div>
+          <ul class="package-features">
+            <li class="package-feature">
+              <i class="fas fa-check feature-icon"></i>
+              <span>20分钟精致洗护</span>
+            </li>
+            <li class="package-feature">
+              <i class="fas fa-check feature-icon"></i>
+              <span>高级宠物洗浴液</span>
+            </li>
+            <li class="package-feature">
+              <i class="fas fa-check feature-icon"></i>
+              <span>按摩水流+低温烘干</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- 积分卡片 -->
+      <div class="points-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div class="points-label">我的积分</div>
+            <div class="points-value">235</div>
+          </div>
+          <div style="width: 60px; height: 60px;">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 55C43.8071 55 55 43.8071 55 30C55 16.1929 43.8071 5 30 5C16.1929 5 5 16.1929 5 30C5 43.8071 16.1929 55 30 55Z" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+              <path d="M30 55C43.8071 55 55 43.8071 55 30C55 16.1929 43.8071 5 30 5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 6"/>
+              <text x="50%" y="50%" font-family="Arial" font-size="12" fill="white" text-anchor="middle" dominant-baseline="middle">78%</text>
+            </svg>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+          <div style="opacity: 0.8; font-size: 14px;">再积65分可兑换免费洗护</div>
+          <button class="btn" style="background: rgba(255,255,255,0.2); color: white; padding: 8px 12px; font-size: 14px;">
+            去兑换
+          </button>
+        </div>
+      </div>
+      
+      <!-- 底部空间，确保内容不被导航栏遮挡 -->
+      <div style="height: 100px;"></div>
+    </div>
+    
+    <!-- 引入底部导航 -->
+    <iframe src="../components/footer.html" frameborder="0" style="width:100%; height:84px; border:none; overflow:hidden; position: fixed; bottom: 0; z-index: 1001;"></iframe>
+  </div>
+</body>
+</html> 

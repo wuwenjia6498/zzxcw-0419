@@ -1,0 +1,533 @@
+/* 基本重置样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f5f5f7;
+  color: #333;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* 防止横向滚动 */
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* iPhone 设备模拟 - 重要：调整宽度以适应内容 */
+.device-container {
+  width: 100%;  /* 修改为100%，使其适应页面宽度 */
+  height: 844px;
+  background-color: white;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;  /* 居中显示 */
+  /* 移除边框，修复双边框问题 */
+  border: none;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 390px; /* 限制最大宽度 */
+}
+
+/* iPhone 动态岛 */
+.dynamic-island {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37px;
+  background-color: #000;
+  border-radius: 0 0 20px 20px;
+  z-index: 100;
+}
+
+/* 状态栏 */
+.status-bar {
+  height: 44px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  z-index: 10;
+}
+
+.status-bar-left {
+  display: flex;
+  align-items: center;
+}
+
+.status-bar-right {
+  display: flex;
+  align-items: center;
+}
+
+.battery-icon {
+  margin-left: 5px;
+}
+
+/* 内容区域 */
+.app-content {
+  height: calc(100% - 44px - 84px);
+  overflow-y: auto;
+  overflow-x: hidden; /* 防止横向滚动 */
+  background-color: #f8f8f8;
+  position: relative;
+  padding-bottom: 100px; /* 增加底部内边距，避免内容被底部导航栏遮挡 */
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 通用组件样式 */
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin: 12px 20px;
+  width: auto;
+  max-width: calc(100% - 40px);
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* 主题颜色 - 宠物应用专属 - 调整为更温暖的色调 */
+:root {
+  --primary: #ff9478; /* 温暖的珊瑚色 */
+  --secondary: #ffb367; /* 柔和的橙色 */
+  --success: #4cd964; /* 苹果风格的绿色 */
+  --warning: #ffcc00; /* 苹果风格的黄色 */
+  --danger: #ff3b30; /* 苹果风格的红色 */
+  --light-bg: #f8f9fa;
+  --gradient-primary: linear-gradient(135deg, #ff9478, #ff7d50); /* 珊瑚色渐变 */
+}
+
+/* 页面标题 */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 16px 20px;
+  color: #1d1d1f;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 20px;
+  color: #48484a;
+}
+
+/* 列表样式 */
+.list-item {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+/* 搜索框 */
+.search-bar {
+  background-color: rgba(142, 142, 147, 0.12);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 12px 20px;
+  display: flex;
+  align-items: center;
+  max-width: calc(100% - 40px);
+}
+
+.search-icon {
+  color: #8e8e93;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  flex: 1;
+  font-size: 16px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* 宠物形象元素 */
+.pet-icon {
+  color: var(--secondary);
+}
+
+/* 专用主题按钮 */
+.pet-wash-btn {
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 15px rgba(255, 148, 120, 0.3);
+}
+
+/* 设备状态标签 */
+.status-tag {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-available {
+  background-color: rgba(76, 217, 100, 0.1);
+  color: #4cd964;
+}
+
+.status-busy {
+  background-color: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+}
+
+.status-maintenance {
+  background-color: rgba(255, 204, 0, 0.1);
+  color: #ffcc00;
+}
+
+/* iframe 容器 */
+.frames-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 页面标签 */
+.frame-label {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* 设备项目 */
+.device-item {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 16px;
+  margin: 0 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.device-info {
+  flex: 1;
+  min-width: 0; /* 允许子元素压缩 */
+  overflow: hidden; /* 隐藏溢出内容 */
+}
+
+.device-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.device-address {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.device-distance {
+  color: #888;
+  font-size: 12px;
+}
+
+/* 进度条 */
+.progress-bar {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+/* 表单样式 */
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+/* 订单卡片 */
+.order-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 100%;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.order-date {
+  color: #888;
+  font-size: 14px;
+}
+
+.order-details {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.order-total {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* 评分星星 */
+.rating {
+  display: flex;
+  margin: 5px 0;
+}
+
+.star {
+  color: #ddd;
+  font-size: 20px;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #ffcc00;
+}
+
+/* 积分卡片 */
+.points-card {
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 12px 20px;
+  box-shadow: 0 4px 15px rgba(255, 148, 120, 0.3);
+  width: auto;
+  max-width: calc(100% - 40px);
+}
+
+.points-value {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.points-label {
+  opacity: 0.8;
+}
+
+/* 套餐选择 */
+.package-card {
+  border: 2px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.package-card.selected {
+  border-color: var(--primary);
+  background-color: rgba(255, 148, 120, 0.05);
+}
+
+.package-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.package-name {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.package-price {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.package-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.package-feature {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon {
+  color: var(--primary);
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* 宠物图像样式 */
+.pet-image-container {
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.pet-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pet-image:hover {
+  transform: scale(1.03);
+}
+
+/* 特色服务卡片 */
+.feature-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.feature-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  padding: 15px;
+  color: white;
+}
+
+.feature-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.feature-description {
+  font-size: 12px;
+  opacity: 0.9;
+} 

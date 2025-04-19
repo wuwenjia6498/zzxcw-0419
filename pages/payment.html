@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宠物洗护 - 支付结果</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="device-container">
+    <!-- 引入头部状态栏 -->
+    <iframe src="../components/header.html" frameborder="0" style="width:100%; height:80px; border:none; overflow:hidden;"></iframe>
+    
+    <div class="app-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+      <!-- 支付成功图标 -->
+      <div style="width: 80px; height: 80px; background: rgba(46, 204, 113, 0.1); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+        <i class="fas fa-check" style="color: var(--success); font-size: 40px;"></i>
+      </div>
+      
+      <h1 style="font-size: 24px; font-weight: 700; margin-bottom: 10px;">支付成功</h1>
+      <p style="color: #666; margin-bottom: 30px;">您的宠物洗护服务已经准备就绪</p>
+      
+      <!-- 订单信息卡片 -->
+      <div class="card" style="width: 100%; text-align: left;">
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 15px;">订单信息</h3>
+        
+        <div style="margin-bottom: 10px;">
+          <div style="color: #666; font-size: 14px; margin-bottom: 5px;">订单编号</div>
+          <div>2025041912345678</div>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
+          <div style="color: #666; font-size: 14px; margin-bottom: 5px;">设备信息</div>
+          <div>阳光小区洗宠站点 (A3829)</div>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
+          <div style="color: #666; font-size: 14px; margin-bottom: 5px;">宠物信息</div>
+          <div>旺财 (金毛犬)</div>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
+          <div style="color: #666; font-size: 14px; margin-bottom: 5px;">套餐信息</div>
+          <div>标准洗护 (15分钟 · 标准水流 · 中温烘干)</div>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
+          <div style="color: #666; font-size: 14px; margin-bottom: 5px;">支付金额</div>
+          <div style="color: var(--primary); font-weight: 600;">¥39.9</div>
+        </div>
+        
+        <div>
+          <div style="color: #666; font-size: 14px; margin-bottom: 5px;">支付时间</div>
+          <div>2025-04-19 17:05:32</div>
+        </div>
+      </div>
+      
+      <!-- 获得积分 -->
+      <div style="margin-top: 20px; background: #fff4e0; padding: 10px 20px; border-radius: 10px; width: 100%; display: flex; align-items: center;">
+        <i class="fas fa-gift" style="color: #ff8c42; font-size: 24px; margin-right: 10px;"></i>
+        <div style="flex: 1;">
+          <div style="font-weight: 600; margin-bottom: 3px;">获得积分</div>
+          <div style="font-size: 14px; color: #666;">本次消费获得 39 积分</div>
+        </div>
+      </div>
+      
+      <!-- 使用提示 -->
+      <div style="margin-top: 30px; background: rgba(0, 166, 251, 0.1); padding: 15px; border-radius: 10px; width: 100%;">
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 10px; display: flex; align-items: center;">
+          <i class="fas fa-info-circle" style="color: var(--primary); margin-right: 8px;"></i>
+          使用提示
+        </h3>
+        <ul style="list-style: none; margin: 0; padding: 0; font-size: 14px; color: #444;">
+          <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+            <i class="fas fa-circle" style="color: var(--primary); font-size: 8px; margin-right: 8px; margin-top: 6px;"></i>
+            <span>请在5分钟内前往设备进行激活，否则需要重新扫码</span>
+          </li>
+          <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+            <i class="fas fa-circle" style="color: var(--primary); font-size: 8px; margin-right: 8px; margin-top: 6px;"></i>
+            <span>设备操作请参考现场指引或洗护指南</span>
+          </li>
+          <li style="display: flex; align-items: flex-start;">
+            <i class="fas fa-circle" style="color: var(--primary); font-size: 8px; margin-right: 8px; margin-top: 6px;"></i>
+            <span>如有问题可联系客服：400-123-4567</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- 按钮 -->
+      <div style="display: flex; gap: 15px; margin-top: 30px; width: 100%;">
+        <button class="btn btn-outline" style="flex: 1;">
+          查看订单
+        </button>
+        <button class="btn btn-primary" style="flex: 1;">
+          开始使用
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

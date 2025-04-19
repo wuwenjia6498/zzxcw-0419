@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宠物洗护 - 预约服务</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="device-container">
+    <!-- 引入头部状态栏 -->
+    <iframe src="../components/header.html" frameborder="0" style="width:100%; height:80px; border:none; overflow:hidden;"></iframe>
+    
+    <div class="app-content">
+      <!-- 顶部导航 -->
+      <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #eee;">
+        <a href="javascript:history.back()" style="color: #333; margin-right: 15px;">
+          <i class="fas fa-chevron-left" style="font-size: 18px;"></i>
+        </a>
+        <h1 style="font-size: 18px; font-weight: 600; flex: 1; text-align: center;">预约服务</h1>
+        <div style="width: 18px;"></div> <!-- 保持标题居中 -->
+      </div>
+      
+      <!-- 设备信息 -->
+      <div class="card">
+        <div style="display: flex; align-items: center;">
+          <div style="width: 50px; height: 50px; background: #f0f9ff; border-radius: 10px; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+            <i class="fas fa-shower" style="color: var(--primary); font-size: 24px;"></i>
+          </div>
+          <div>
+            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 5px;">宠爱乐园设备A</h3>
+            <div style="color: #666; font-size: 14px;">宁波市鄞州区学士路宠爱乐园</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 日期选择 -->
+      <div class="card">
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 15px;">选择日期</h3>
+        
+        <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;">
+          <div style="min-width: 60px; text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #999;">
+            <div style="font-size: 14px; margin-bottom: 5px;">今天</div>
+            <div style="font-size: 18px; font-weight: 600;">19</div>
+            <div style="font-size: 12px; margin-top: 5px;">周五</div>
+          </div>
+          
+          <div style="min-width: 60px; text-align: center; padding: 10px; background: var(--primary); border-radius: 10px; color: white;">
+            <div style="font-size: 14px; margin-bottom: 5px;">明天</div>
+            <div style="font-size: 18px; font-weight: 600;">20</div>
+            <div style="font-size: 12px; margin-top: 5px;">周六</div>
+          </div>
+          
+          <div style="min-width: 60px; text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #333;">
+            <div style="font-size: 14px; margin-bottom: 5px;">后天</div>
+            <div style="font-size: 18px; font-weight: 600;">21</div>
+            <div style="font-size: 12px; margin-top: 5px;">周日</div>
+          </div>
+          
+          <div style="min-width: 60px; text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #333;">
+            <div style="font-size: 14px; margin-bottom: 5px;">周一</div>
+            <div style="font-size: 18px; font-weight: 600;">22</div>
+            <div style="font-size: 12px; margin-top: 5px;">4月</div>
+          </div>
+          
+          <div style="min-width: 60px; text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #333;">
+            <div style="font-size: 14px; margin-bottom: 5px;">周二</div>
+            <div style="font-size: 18px; font-weight: 600;">23</div>
+            <div style="font-size: 12px; margin-top: 5px;">4月</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 时间段选择 -->
+      <div class="card">
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 15px;">选择时间段</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+          <div style="text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #999; position: relative;">
+            <div style="font-size: 14px;">09:00</div>
+            <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center; background: rgba(255,255,255,0.8); border-radius: 10px;">
+              <div style="color: #ff4757; font-size: 12px; font-weight: 500;">已约满</div>
+            </div>
+          </div>
+          
+          <div style="text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #999; position: relative;">
+            <div style="font-size: 14px;">10:00</div>
+            <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center; background: rgba(255,255,255,0.8); border-radius: 10px;">
+              <div style="color: #ff4757; font-size: 12px; font-weight: 500;">已约满</div>
+            </div>
+          </div>
+          
+          <div style="text-align: center; padding: 10px; background: var(--primary); border-radius: 10px; color: white;">
+            <div style="font-size: 14px;">11:00</div>
+          </div>
+          
+          <div style="text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #333;">
+            <div style="font-size: 14px;">13:00</div>
+          </div>
+          
+          <div style="text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #333;">
+            <div style="font-size: 14px;">14:00</div>
+          </div>
+          
+          <div style="text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #333;">
+            <div style="font-size: 14px;">15:00</div>
+          </div>
+          
+          <div style="text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #333;">
+            <div style="font-size: 14px;">16:00</div>
+          </div>
+          
+          <div style="text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #333;">
+            <div style="font-size: 14px;">17:00</div>
+          </div>
+          
+          <div style="text-align: center; padding: 10px; background: #f5f5f5; border-radius: 10px; color: #333;">
+            <div style="font-size: 14px;">18:00</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 宠物选择 -->
+      <div class="card">
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 15px;">选择宠物</h3>
+        
+        <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+          <div style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+            <div style="position: relative;">
+              <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783" alt="宠物头像" style="width: 60px; height: 60px; border-radius: 30px; object-fit: cover; border: 2px solid var(--primary);">
+              <div style="position: absolute; bottom: 0; right: 0; width: 20px; height: 20px; background: var(--primary); border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 2px solid white;">
+                <i class="fas fa-check" style="color: white; font-size: 10px;"></i>
+              </div>
+            </div>
+            <span style="font-size: 14px; margin-top: 8px; font-weight: 500;">旺财</span>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+            <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987" alt="宠物头像" style="width: 60px; height: 60px; border-radius: 30px; object-fit: cover; border: 2px solid #eee;">
+            <span style="font-size: 14px; margin-top: 8px; color: #666;">咪咪</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 套餐选择 -->
+      <div class="card">
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 15px;">选择套餐</h3>
+        
+        <div class="package-card selected">
+          <div class="package-header">
+            <div class="package-name">标准洗护</div>
+            <div class="package-price">¥39.9</div>
+          </div>
+          <ul class="package-features">
+            <li class="package-feature">
+              <i class="fas fa-check feature-icon"></i>
+              <span>15分钟洗护时间</span>
+            </li>
+            <li class="package-feature">
+              <i class="fas fa-check feature-icon"></i>
+              <span>标准水温与压力</span>
+            </li>
+            <li class="package-feature">
+              <i class="fas fa-check feature-icon"></i>
+              <span>中温烘干</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- 预约须知 -->
+      <div class="card">
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 15px;">预约须知</h3>
+        
+        <ul style="list-style: none; margin: 0; padding: 0; font-size: 14px; color: #666;">
+          <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+            <i class="fas fa-circle" style="color: var(--primary); font-size: 8px; margin-right: 8px; margin-top: 6px;"></i>
+            <span>预约成功后，请在预约时间前15分钟到达</span>
+          </li>
+          <li style="margin-bottom: 8px; display: flex; align-items: flex-start;">
+            <i class="fas fa-circle" style="color: var(--primary); font-size: 8px; margin-right: 8px; margin-top: 6px;"></i>
+            <span>如需取消预约，请至少提前2小时操作，否则将扣除预约金</span>
+          </li>
+          <li style="display: flex; align-items: flex-start;">
+            <i class="fas fa-circle" style="color: var(--primary); font-size: 8px; margin-right: 8px; margin-top: 6px;"></i>
+            <span>超过预约时间30分钟未到，系统将自动取消预约</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- 底部付款栏 -->
+      <div style="position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 15px 20px; box-shadow: 0 -2px 10px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: space-between; z-index: 100;">
+        <div>
+          <div style="color: #666; font-size: 14px;">预约金</div>
+          <div style="color: var(--primary); font-size: 20px; font-weight: 700;">¥10.0</div>
+        </div>
+        <button class="btn btn-primary" style="padding: 12px 30px;">
+          确认预约
+        </button>
+      </div>
+      
+      <!-- 底部留白，防止被固定按钮遮挡 -->
+      <div style="height: 80px;"></div>
+    </div>
+  </div>
+</body>
+</html> 

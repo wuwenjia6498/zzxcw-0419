@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宠物洗护 - 洗护进行中</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="device-container">
+    <!-- 引入头部状态栏 -->
+    <iframe src="../components/header.html" frameborder="0" style="width:100%; height:80px; border:none; overflow:hidden;"></iframe>
+    
+    <div class="app-content">
+      <!-- 顶部导航 -->
+      <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #eee;">
+        <a href="javascript:history.back()" style="color: #333; margin-right: 15px;">
+          <i class="fas fa-chevron-left" style="font-size: 18px;"></i>
+        </a>
+        <h1 style="font-size: 18px; font-weight: 600; flex: 1; text-align: center;">洗护进行中</h1>
+        <button style="background: none; border: none; font-size: 18px; color: #8e8e93;">
+          <i class="fas fa-ellipsis-h"></i>
+        </button>
+      </div>
+      
+      <!-- 设备信息 -->
+      <div class="card">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center;">
+            <div style="width: 50px; height: 50px; background: #f0f9ff; border-radius: 10px; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+              <i class="fas fa-shower" style="color: var(--primary); font-size: 24px;"></i>
+            </div>
+            <div>
+              <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 5px;">阳光小区洗宠站点</h3>
+              <div style="color: #666; font-size: 14px;">设备编号：A3829</div>
+            </div>
+          </div>
+          <span class="status-tag status-busy">使用中</span>
+        </div>
+      </div>
+      
+      <!-- 进度展示 -->
+      <div class="card">
+        <!-- 环形进度 -->
+        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+          <div style="position: relative; width: 200px; height: 200px;">
+            <!-- 背景圆环 -->
+            <svg width="200" height="200" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="80" fill="none" stroke="#f0f0f0" stroke-width="16" />
+              
+              <!-- 进度圆环 - 进度约 65% -->
+              <circle cx="100" cy="100" r="80" fill="none" stroke="url(#gradient)" stroke-width="16" stroke-dasharray="502" stroke-dashoffset="176" stroke-linecap="round" transform="rotate(-90, 100, 100)" />
+              
+              <!-- 渐变定义 -->
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#00a6fb" />
+                  <stop offset="100%" stop-color="#0582ca" />
+                </linearGradient>
+              </defs>
+            </svg>
+            
+            <!-- 中间文字 -->
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+              <div style="font-size: 32px; font-weight: 700; color: var(--primary);">08:36</div>
+              <div style="color: #666; font-size: 14px;">剩余时间</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 进度阶段 -->
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+          <div style="text-align: center; width: 25%;">
+            <div style="width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 10px;">
+              <i class="fas fa-check" style="color: white; font-size: 18px;"></i>
+            </div>
+            <div style="font-size: 12px; color: var(--primary); font-weight: 500;">准备</div>
+          </div>
+          
+          <div style="text-align: center; width: 25%;">
+            <div style="width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 10px;">
+              <i class="fas fa-check" style="color: white; font-size: 18px;"></i>
+            </div>
+            <div style="font-size: 12px; color: var(--primary); font-weight: 500;">加水</div>
+          </div>
+          
+          <div style="text-align: center; width: 25%;">
+            <div style="width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 10px; position: relative;">
+              <i class="fas fa-soap" style="color: white; font-size: 18px;"></i>
+              <div style="position: absolute; top: -5px; right: -5px; width: 15px; height: 15px; background: white; border-radius: 50%; border: 2px solid var(--primary); display: flex; justify-content: center; align-items: center;">
+                <div style="width: 5px; height: 5px; background: var(--primary); border-radius: 50%;"></div>
+              </div>
+            </div>
+            <div style="font-size: 12px; color: var(--primary); font-weight: 500;">清洗中</div>
+          </div>
+          
+          <div style="text-align: center; width: 25%;">
+            <div style="width: 40px; height: 40px; background: #f0f0f0; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 10px;">
+              <i class="fas fa-wind" style="color: #999; font-size: 18px;"></i>
+            </div>
+            <div style="font-size: 12px; color: #999;">烘干</div>
+          </div>
+        </div>
+        
+        <!-- 当前状态 -->
+        <div style="background: #f8f8f8; padding: 12px; border-radius: 10px; display: flex; align-items: center;">
+          <div style="width: 40px; height: 40px; background: rgba(0, 166, 251, 0.1); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+            <i class="fas fa-soap" style="color: var(--primary); font-size: 18px;"></i>
+          </div>
+          <div style="flex: 1;">
+            <div style="font-weight: 600; margin-bottom: 3px;">正在清洗</div>
+            <div style="font-size: 14px; color: #666;">标准压力清洗中，请耐心等待...</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 参数实时监控 -->
+      <div class="card">
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 15px;">参数监控</h3>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div style="background: #f8f8f8; padding: 12px; border-radius: 10px;">
+            <div style="color: #666; font-size: 14px; margin-bottom: 5px;">水温</div>
+            <div style="display: flex; align-items: center;">
+              <i class="fas fa-temperature-half" style="color: var(--primary); margin-right: 10px; font-size: 24px;"></i>
+              <div style="font-size: 20px; font-weight: 600;">38°C</div>
+            </div>
+          </div>
+          
+          <div style="background: #f8f8f8; padding: 12px; border-radius: 10px;">
+            <div style="color: #666; font-size: 14px; margin-bottom: 5px;">水压</div>
+            <div style="display: flex; align-items: center;">
+              <i class="fas fa-tachometer-alt" style="color: var(--primary); margin-right: 10px; font-size: 24px;"></i>
+              <div style="font-size: 20px; font-weight: 600;">中等</div>
+            </div>
+          </div>
+          
+          <div style="background: #f8f8f8; padding: 12px; border-radius: 10px;">
+            <div style="color: #666; font-size: 14px; margin-bottom: 5px;">洗浴液用量</div>
+            <div style="display: flex; align-items: center;">
+              <i class="fas fa-fill-drip" style="color: var(--primary); margin-right: 10px; font-size: 24px;"></i>
+              <div style="font-size: 20px; font-weight: 600;">25ml</div>
+            </div>
+          </div>
+          
+          <div style="background: #f8f8f8; padding: 12px; border-radius: 10px;">
+            <div style="color: #666; font-size: 14px; margin-bottom: 5px;">已用水量</div>
+            <div style="display: flex; align-items: center;">
+              <i class="fas fa-droplet" style="color: var(--primary); margin-right: 10px; font-size: 24px;"></i>
+              <div style="font-size: 20px; font-weight: 600;">18L</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 紧急按钮 -->
+      <div style="padding: 20px;">
+        <button class="btn" style="width: 100%; background: #fff1f0; color: #ff4757; border: 1px solid #ff4757; padding: 15px; font-size: 16px;">
+          <i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>
+          紧急停止
+        </button>
+        
+        <div style="margin-top: 10px; text-align: center; font-size: 14px; color: #666;">
+          如需帮助，请致电客服：400-123-4567
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

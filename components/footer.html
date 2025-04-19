@@ -1,0 +1,147 @@
+<!-- 底部导航栏组件 -->
+<div class="tab-bar">
+  <a href="../pages/home.html" class="tab-item" id="home-tab">
+    <i class="fas fa-home tab-icon"></i>
+    <span>首页</span>
+  </a>
+  <a href="../pages/nearby.html" class="tab-item" id="nearby-tab">
+    <i class="fas fa-map-marker-alt tab-icon"></i>
+    <span>附近</span>
+  </a>
+  <a href="../pages/scan.html" class="tab-item" id="scan-tab">
+    <div class="scan-button">
+      <i class="fas fa-qrcode"></i>
+    </div>
+    <span>扫码</span>
+  </a>
+  <a href="../pages/orders.html" class="tab-item" id="orders-tab">
+    <i class="fas fa-receipt tab-icon"></i>
+    <span>订单</span>
+  </a>
+  <a href="../pages/profile.html" class="tab-item" id="profile-tab">
+    <i class="fas fa-user tab-icon"></i>
+    <span>我的</span>
+  </a>
+</div>
+
+<style>
+  .tab-bar {
+    height: 84px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #8e8e93;
+    font-size: 10px;
+    width: 20%;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    transition: color 0.3s ease;
+    padding: 8px 0;
+    position: relative;
+  }
+
+  .tab-item.active {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tab-icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .tab-item:active .tab-icon {
+    transform: scale(0.9);
+  }
+  
+  .scan-button {
+    width: 56px;
+    height: 56px;
+    background: var(--primary);
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -15px;
+    box-shadow: 0 4px 12px rgba(255, 148, 120, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .scan-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(255, 148, 120, 0.2);
+  }
+  
+  .scan-button i {
+    color: white;
+    font-size: 24px;
+  }
+  
+  /* 适配底部安全区域（iPhone X 及以上机型） */
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .tab-bar {
+      padding-bottom: calc(env(safe-area-inset-bottom) + 5px);
+      height: calc(64px + env(safe-area-inset-bottom));
+    }
+  }
+</style>
+
+<script>
+  // 根据当前页面高亮对应的tab
+  const currentPath = window.location.pathname;
+  
+  // 移除所有tab的活跃状态
+  document.querySelectorAll('.tab-item').forEach(tab => {
+    tab.classList.remove('active');
+  });
+  
+  // 根据当前路径添加活跃状态
+  if (currentPath.includes('home.html')) {
+    document.getElementById('home-tab').classList.add('active');
+  } else if (currentPath.includes('nearby.html')) {
+    document.getElementById('nearby-tab').classList.add('active');
+  } else if (currentPath.includes('scan.html')) {
+    document.getElementById('scan-tab').classList.add('active');
+  } else if (currentPath.includes('orders.html')) {
+    document.getElementById('orders-tab').classList.add('active');
+  } else if (currentPath.includes('profile.html')) {
+    document.getElementById('profile-tab').classList.add('active');
+  }
+</script> 

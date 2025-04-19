@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>宠物洗护 - 附近</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .map-container {
+      width: 100%;
+      height: 220px;
+      background-color: #f5f5f5;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .map-placeholder {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .search-results {
+      margin-top: 20px;
+    }
+    
+    .filter-section {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+      overflow-x: auto;
+      padding-bottom: 5px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    
+    .filter-section::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .filter-pill {
+      background-color: #f5f5f5;
+      color: #333;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    
+    .filter-pill.active {
+      background-color: var(--primary);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="device-container">
+    <!-- 引入头部状态栏 -->
+    <iframe src="../components/header.html" frameborder="0" style="width:100%; height:80px; border:none; overflow:hidden;"></iframe>
+    
+    <div class="app-content">
+      <!-- 返回按钮和标题 -->
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <a href="home.html" class="back-button">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1 class="page-title" style="margin-left: 10px; margin-bottom: 0;">附近设备</h1>
+      </div>
+      
+      <!-- 地图视图 -->
+      <div class="map-container">
+        <img src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/121.628,29.866,13,0/600x400?access_token=pk.dummy" alt="宁波地图" class="map-placeholder">
+        <div style="position: absolute; bottom: 10px; right: 10px; background: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.12);">
+          <i class="fas fa-location-arrow" style="color: var(--primary); margin-right: 4px;"></i>
+          定位至当前位置
+        </div>
+      </div>
+      
+      <!-- 搜索框 -->
+      <div class="search-bar">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" placeholder="搜索附近设备..." class="search-input">
+      </div>
+      
+      <!-- 筛选选项 -->
+      <div class="filter-section">
+        <div class="filter-pill active">全部</div>
+        <div class="filter-pill">距离优先</div>
+        <div class="filter-pill">空闲设备</div>
+        <div class="filter-pill">新开业</div>
+        <div class="filter-pill">评分最高</div>
+      </div>
+      
+      <!-- 搜索结果列表 -->
+      <div class="search-results">
+        <div class="device-item">
+          <div class="device-info">
+            <div class="device-name">江东万达洗宠站点</div>
+            <div class="device-address">宁波市江东区万达广场北门旁</div>
+            <div class="device-distance">距离: 300米</div>
+          </div>
+          <div>
+            <span class="status-tag status-available">空闲中</span>
+          </div>
+        </div>
+        
+        <div class="device-item">
+          <div class="device-info">
+            <div class="device-name">宠爱天一设备A</div>
+            <div class="device-address">宁波市海曙区天一广场宠爱中心</div>
+            <div class="device-distance">距离: 1.2公里</div>
+          </div>
+          <div>
+            <span class="status-tag status-busy">使用中</span>
+          </div>
+        </div>
+        
+        <div class="device-item">
+          <div class="device-info">
+            <div class="device-name">鄞州印象城洗宠设备</div>
+            <div class="device-address">宁波市鄞州区印象城1楼宠物区</div>
+            <div class="device-distance">距离: 2.5公里</div>
+          </div>
+          <div>
+            <span class="status-tag status-available">空闲中</span>
+          </div>
+        </div>
+        
+        <div class="device-item">
+          <div class="device-info">
+            <div class="device-name">宠物乐园设备</div>
+            <div class="device-address">宁波市北仑区宠物主题公园</div>
+            <div class="device-distance">距离: 5.8公里</div>
+          </div>
+          <div>
+            <span class="status-tag status-maintenance">维护中</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 底部空间，确保内容不被导航栏遮挡 -->
+      <div style="height: 100px;"></div>
+    </div>
+    
+    <!-- 引入底部导航 -->
+    <iframe src="../components/footer.html" frameborder="0" style="width:100%; height:84px; border:none; overflow:hidden; position: fixed; bottom: 0; z-index: 1001;"></iframe>
+  </div>
+</body>
+</html> 

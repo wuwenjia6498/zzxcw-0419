@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宠物洗护 - 个人中心</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="device-container">
+    <!-- 引入头部状态栏 -->
+    <iframe src="../components/header.html" frameborder="0" style="width:100%; height:80px; border:none; overflow:hidden;"></iframe>
+    
+    <div class="app-content">
+      <!-- 个人信息卡片 -->
+      <div style="padding: 20px; background: var(--gradient-primary); color: white; position: relative;">
+        <div style="display: flex; align-items: center;">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a" alt="用户头像" style="width: 70px; height: 70px; border-radius: 35px; object-fit: cover; border: 3px solid rgba(255,255,255,0.5);">
+          <div style="margin-left: 15px;">
+            <h2 style="font-size: 20px; margin-bottom: 5px;">旺财的主人</h2>
+            <div style="font-size: 14px; opacity: 0.8;">
+              <span><i class="fas fa-phone" style="margin-right: 5px;"></i>138****6789</span>
+            </div>
+            <div style="display: flex; align-items: center; margin-top: 5px; background: rgba(255,255,255,0.2); padding: 3px 8px; border-radius: 12px; width: fit-content;">
+              <i class="fas fa-crown" style="color: gold; margin-right: 5px; font-size: 12px;"></i>
+              <span style="font-size: 12px;">普通会员</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 积分展示 -->
+        <div style="display: flex; margin-top: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; padding: 10px;">
+          <div style="flex: 1; text-align: center; border-right: 1px solid rgba(255,255,255,0.2);">
+            <div style="font-size: 24px; font-weight: bold;">235</div>
+            <div style="font-size: 12px; opacity: 0.8;">积分</div>
+          </div>
+          <div style="flex: 1; text-align: center; border-right: 1px solid rgba(255,255,255,0.2);">
+            <div style="font-size: 24px; font-weight: bold;">3</div>
+            <div style="font-size: 12px; opacity: 0.8;">优惠券</div>
+          </div>
+          <div style="flex: 1; text-align: center;">
+            <div style="font-size: 24px; font-weight: bold;">8</div>
+            <div style="font-size: 12px; opacity: 0.8;">订单</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 宠物信息 -->
+      <div class="card" style="margin-top: 15px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+          <h3 style="font-size: 18px; font-weight: 600;">我的宠物</h3>
+          <button style="background: none; border: none; color: var(--primary); font-size: 14px;">添加宠物</button>
+        </div>
+        
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783" alt="宠物头像" style="width: 60px; height: 60px; border-radius: 30px; object-fit: cover; margin-right: 15px;">
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h4 style="font-size: 16px; font-weight: 600;">旺财</h4>
+              <span style="background: var(--primary); color: white; font-size: 12px; padding: 2px 8px; border-radius: 10px;">主宠</span>
+            </div>
+            <div style="color: #666; font-size: 14px; margin-top: 5px;">金毛犬 · 2岁 · 公</div>
+          </div>
+        </div>
+        
+        <div style="display: flex; align-items: center;">
+          <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987" alt="宠物头像" style="width: 60px; height: 60px; border-radius: 30px; object-fit: cover; margin-right: 15px;">
+          <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h4 style="font-size: 16px; font-weight: 600;">咪咪</h4>
+            </div>
+            <div style="color: #666; font-size: 14px; margin-top: 5px;">英短猫 · 1岁 · 母</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 功能列表 -->
+      <div class="card" style="margin-top: 15px;">
+        <div style="font-size: 18px; font-weight: 600; margin-bottom: 15px;">会员服务</div>
+        
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center;">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 50px; height: 50px; background: #f0f9ff; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 5px;">
+              <i class="fas fa-ticket-alt" style="color: var(--primary); font-size: 22px;"></i>
+            </div>
+            <span style="font-size: 12px;">优惠券</span>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 50px; height: 50px; background: #f0f9ff; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 5px;">
+              <i class="fas fa-gift" style="color: var(--primary); font-size: 22px;"></i>
+            </div>
+            <span style="font-size: 12px;">积分兑换</span>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 50px; height: 50px; background: #f0f9ff; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 5px;">
+              <i class="fas fa-crown" style="color: var(--primary); font-size: 22px;"></i>
+            </div>
+            <span style="font-size: 12px;">会员升级</span>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 50px; height: 50px; background: #f0f9ff; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 5px;">
+              <i class="fas fa-id-card" style="color: var(--primary); font-size: 22px;"></i>
+            </div>
+            <span style="font-size: 12px;">宠物档案</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 设置列表 -->
+      <div class="card" style="margin-top: 15px;">
+        <div style="font-size: 18px; font-weight: 600; margin-bottom: 15px;">设置</div>
+        
+        <div class="list-item" style="padding: 12px 0;">
+          <i class="fas fa-user-cog" style="color: #666; margin-right: 15px; font-size: 18px;"></i>
+          <div style="flex: 1;">个人资料设置</div>
+          <i class="fas fa-chevron-right" style="color: #ccc;"></i>
+        </div>
+        
+        <div class="list-item" style="padding: 12px 0;">
+          <i class="fas fa-bell" style="color: #666; margin-right: 15px; font-size: 18px;"></i>
+          <div style="flex: 1;">消息通知</div>
+          <i class="fas fa-chevron-right" style="color: #ccc;"></i>
+        </div>
+        
+        <div class="list-item" style="padding: 12px 0;">
+          <i class="fas fa-shield-alt" style="color: #666; margin-right: 15px; font-size: 18px;"></i>
+          <div style="flex: 1;">隐私设置</div>
+          <i class="fas fa-chevron-right" style="color: #ccc;"></i>
+        </div>
+        
+        <div class="list-item" style="padding: 12px 0;">
+          <i class="fas fa-question-circle" style="color: #666; margin-right: 15px; font-size: 18px;"></i>
+          <div style="flex: 1;">帮助与反馈</div>
+          <i class="fas fa-chevron-right" style="color: #ccc;"></i>
+        </div>
+        
+        <div class="list-item" style="padding: 12px 0; border-bottom: none;">
+          <i class="fas fa-info-circle" style="color: #666; margin-right: 15px; font-size: 18px;"></i>
+          <div style="flex: 1;">关于我们</div>
+          <i class="fas fa-chevron-right" style="color: #ccc;"></i>
+        </div>
+      </div>
+      
+      <!-- 退出登录按钮 -->
+      <div style="padding: 20px;">
+        <button class="btn" style="width: 100%; background: #f5f5f5; color: #666;">
+          退出登录
+        </button>
+      </div>
+    </div>
+    
+    <!-- 引入底部导航 -->
+    <iframe src="../components/footer.html" frameborder="0" style="width:100%; height:84px; border:none; overflow:hidden; position: absolute; bottom: 0;"></iframe>
+  </div>
+</body>
+</html> 
